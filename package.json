@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack serve --open --mode=development",
-    "lint": "eslint"
+    "lint": "eslint --cache --ext .ts,tsx . --fix"
   },
   "repository": {
     "type": "git",
@@ -29,6 +29,7 @@
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.2.2",
     "babel-preset-react": "^6.24.1",
+    "copy-webpack-plugin": "^8.1.1",
     "css-loader": "^5.2.0",
     "eslint": "^7.23.0",
     "eslint-plugin-react": "^7.23.2",
@@ -41,6 +42,7 @@
     "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
+    "@material-ui/core": "^4.11.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   }

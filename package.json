@@ -1,0 +1,47 @@
+{
+  "name": "job-board",
+  "version": "1.0.0",
+  "description": "ReDi Job Board",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack serve --open --mode=development",
+    "lint": "eslint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lopis/job-board.git"
+  },
+  "keywords": [],
+  "author": "ReDi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lopis/job-board/issues"
+  },
+  "homepage": "https://github.com/lopis/job-board#readme",
+  "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.13.0",
+    "@babel/preset-react": "^7.13.13",
+    "@types/react": "^17.0.3",
+    "@types/react-dom": "^17.0.3",
+    "@typescript-eslint/eslint-plugin": "^4.21.0",
+    "@typescript-eslint/parser": "^4.21.0",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.2.2",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^5.2.0",
+    "eslint": "^7.23.0",
+    "eslint-plugin-react": "^7.23.2",
+    "html-webpack-plugin": "^5.3.1",
+    "style-loader": "^2.0.0",
+    "ts-loader": "^8.1.0",
+    "typescript": "^4.2.4",
+    "webpack": "^5.31.0",
+    "webpack-cli": "^4.6.0",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}

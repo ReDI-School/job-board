@@ -1,0 +1,22 @@
+# EditorConfig is awesome: http://EditorConfig.org
+
+# This file lets some editors know what is the
+# code style rules that we follow in this project.
+# Most modern editors should provide a way to
+# automatically format your code correctly.
+
+# top-most EditorConfig file
+root = true
+
+# Apply this style to all files
+[*]
+# Unix-style newlines with a newline ending every file
+end_of_line = lf
+# Always end file with a single new line.
+insert_final_newline = true
+charset = utf-8
+# Don't leave hanging whitespace at the end of the lines.
+trim_trailing_whitespace = true
+# Always use blocks of 2 spaces as identation
+indent_style = space
+indent_size = 2

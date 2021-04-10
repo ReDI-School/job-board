@@ -17,7 +17,6 @@ const App = (): JSX.Element => {
           <Home />
         </Route>
       </Switch>
-      <Home />
     </BrowserRouter>
   );
 };

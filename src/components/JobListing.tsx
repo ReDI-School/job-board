@@ -8,6 +8,7 @@ import PostAddIcon from "@material-ui/icons/PostAdd";
 import PeopleIcon from "@material-ui/icons/People";
 import { Typography } from "@material-ui/core";
 import { formatDate } from "../utils";
+import { useHistory } from "react-router";
 
 interface Props {
   job: IJob;
@@ -16,7 +17,7 @@ interface Props {
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
-      maxWidth: 960,
+      //maxWidth: 960,
     },
     chip: {
       margin: "10px 10px 10px 0",
@@ -34,10 +35,15 @@ const useStyles = makeStyles((theme: Theme) =>
 
 const JobListing = ({ job }: Props) => {
   const classes = useStyles();
+  const history = useHistory();
 
   return (
     <article className={classes.root}>
-      <Card title={job.header} description={job.content}>
+      <Card
+        title={job.header}
+        description={job.content}
+        onActionClicked={() => history.push(`/job/${job.id}`)}
+      >
         <Chip
           className={classes.chip}
           label={job.employment_time}

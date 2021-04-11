@@ -26,13 +26,13 @@ module.exports = {
   ],
   'settings': {
     'react': {
-      "version": "detect"
+      'version': 'detect'
     }
   },
   'rules': {
     'indent': [
       'error',
-      4
+      2
     ],
     'linebreak-style': [
       'error',
@@ -45,6 +45,8 @@ module.exports = {
     'semi': [
       'error',
       'always'
-    ]
+    ],
+    '@typescript-eslint/no-explicit-any': 'off',
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
   }
 };

@@ -1,10 +1,11 @@
-import CircularProgress from "@material-ui/core/CircularProgress";
-import Typography from "@material-ui/core/Typography";
-import React, { ReactElement, PropsWithChildren } from "react";
+import CircularProgress from '@material-ui/core/CircularProgress';
+import Typography from '@material-ui/core/Typography';
+import React, { ReactElement } from 'react';
 
 interface IProps {
   isLoading: boolean;
-  error: any;
+  hasError: boolean;
+  errorMessage?: string;
   data: any;
   children(data: any, props?: any): ReactElement; // no strings or numbers allowed
   props?: any;
@@ -15,16 +16,17 @@ interface IProps {
  */
 function FetchWrapper({
   isLoading,
-  error,
+  hasError,
+  errorMessage,
   data,
   children,
   props,
 }: IProps): ReactElement {
   if (isLoading) return <CircularProgress />;
-  if (error)
+  if (hasError)
     return (
       <Typography>
-        could not load data check console for more information
+        {errorMessage || 'could not load data check console for more information'}
       </Typography>
     );
   if (!isLoading && data) return children({ data, ...props });

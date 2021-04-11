@@ -6,15 +6,15 @@ import {
   CardHeader,
   Container,
   Typography,
-} from "@material-ui/core";
-import Button from "@material-ui/core/Button";
-import { Save } from "@material-ui/icons";
-import React, { ReactElement } from "react";
-import { useParams } from "react-router";
-import { useFetchJob } from "../api/useFetch";
-import FetchWrapper from "../components/FetchWrapper";
-import PageLayout from "../layouts/PageLayout";
-import { IJob } from "../types";
+} from '@material-ui/core';
+import Button from '@material-ui/core/Button';
+import { Save } from '@material-ui/icons';
+import React, { ReactElement } from 'react';
+import { useParams } from 'react-router';
+import { useFetchJob } from '../api/useFetch';
+import FetchWrapper from '../components/FetchWrapper';
+import PageLayout from '../layouts/PageLayout';
+import { IJob } from '../types';
 
 interface Props {
   jobId: string;
@@ -22,22 +22,21 @@ interface Props {
 
 /** Page that displays the job for the provided jobId */
 function JobPage({ jobId }: Props): ReactElement {
-  const { data, isLoading, hasError, errorMessage } = useFetchJob(jobId);
+  const result = useFetchJob(jobId);
   return (
     <PageLayout>
       <Container>
         <Box paddingY={2}>
-          <FetchWrapper isLoading={isLoading} error={hasError} data={data}>
+          <FetchWrapper {...result}>
             {({ data }: { data: IJob }) => (
               <Card>
-                {console.log(data)}
                 {/* everything ok? so render the job posting as card */}
                 <CardHeader
                   /* avatar={data?.icon ? <Avatar>A</Avatar> : null} */
                   title={
                     <Box>
                       <Typography variant="h5">
-                        {data.header || "no header found"}
+                        {data.header || 'no header found'}
                       </Typography>
                       {data.company_name && (
                         <Typography variant="subtitle1">
@@ -62,7 +61,7 @@ function JobPage({ jobId }: Props): ReactElement {
                   }
                 />
                 <CardContent>
-                  {data.content || "could not find job description"}
+                  {data.content || 'could not find job description'}
                 </CardContent>
               </Card>
             )}

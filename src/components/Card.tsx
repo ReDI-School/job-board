@@ -7,10 +7,10 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles({
-    root: {
-        margin: 15,
-        position: 'relative',
-    },
+  root: {
+    margin: 15,
+    position: 'relative',
+  },
 });
 
 interface Props {
@@ -21,33 +21,33 @@ interface Props {
 }
 
 const SimpleCard = ({
-    title,
-    description,
-    children,
-    onActionClicked,
+  title,
+  description,
+  children,
+  onActionClicked,
 }: Props) => {
-    const classes = useStyles();
+  const classes = useStyles();
 
-    return (
-        <Card className={classes.root}>
-            <CardContent>
-                {title && (
-                    <Typography gutterBottom variant="h5" component="h2">
-                        {title}
-                    </Typography>
-                )}
-                {description && (
-                    <Typography variant="body2" color="textSecondary" component="p">
-                        {description}
-                    </Typography>
-                )}
-                {children}
-            </CardContent>
-            <CardActions onClick={onActionClicked}>
-                <Button size="small">More</Button>
-            </CardActions>
-        </Card>
-    );
+  return (
+    <Card className={classes.root}>
+      <CardContent>
+        {title && (
+          <Typography gutterBottom variant="h5" component="h2">
+            {title}
+          </Typography>
+        )}
+        {description && (
+          <Typography variant="body2" color="textSecondary" component="p">
+            {description}
+          </Typography>
+        )}
+        {children}
+      </CardContent>
+      <CardActions onClick={onActionClicked}>
+        <Button size="small">More</Button>
+      </CardActions>
+    </Card>
+  );
 };
 
 export default SimpleCard;

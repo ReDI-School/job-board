@@ -1,15 +1,14 @@
-import React from "react";
-import PageLayout from "../layouts/PageLayout";
-import JobListing from "../components/JobListing";
-import { IJob } from "../types";
-import { useFetchJobs } from "../api/useFetch";
-import { Container } from "@material-ui/core";
+import React from 'react';
+import PageLayout from '../layouts/PageLayout';
+import JobListing from '../components/JobListing';
+import { IJob } from '../types';
+import { useFetchJobs } from '../api/useFetch';
+import { Container } from '@material-ui/core';
 
 const Home = () => {
   const result = useFetchJobs();
-  console.log("result", result?.data?.jobs);
 
-  const { data, isLoading, hasError, errorMessage } = result;
+  const { data, isLoading } = result;
   const jobs = data?.jobs;
 
   return (
@@ -19,9 +18,8 @@ const Home = () => {
           jobs
             ? jobs.map((job: IJob) => <JobListing job={job} key={job.id} />)
             : isLoading
-            ? "Loading job listings"
-            : "No jobs found"
-          //
+              ? 'Loading job listings'
+              : 'No jobs found'
         }
       </Container>
     </PageLayout>

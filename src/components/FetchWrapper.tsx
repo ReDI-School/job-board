@@ -26,7 +26,8 @@ function FetchWrapper({
   if (hasError)
     return (
       <Typography>
-        {errorMessage || 'could not load data check console for more information'}
+        {errorMessage ||
+          'could not load data check console for more information'}
       </Typography>
     );
   if (!isLoading && data) return children({ data, ...props });

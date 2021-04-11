@@ -10,6 +10,7 @@ import {
 import Button from '@material-ui/core/Button';
 import { Save } from '@material-ui/icons';
 import React, { ReactElement } from 'react';
+
 import { useParams } from 'react-router';
 import { useFetchJob } from '../api/useFetch';
 import FetchWrapper from '../components/FetchWrapper';
@@ -61,7 +62,12 @@ function JobPage({ jobId }: Props): ReactElement {
                   }
                 />
                 <CardContent>
-                  {data.content || 'could not find job description'}
+                  {/* you could use the library react-html-parser too but: its
+                  pretty outdated (needs polyfills and different react version /
+                  -force flag)*/}
+                  {data.content && (
+                    <div dangerouslySetInnerHTML={{ __html: data.content }} />
+                  )}
                 </CardContent>
               </Card>
             )}

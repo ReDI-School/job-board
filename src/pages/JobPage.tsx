@@ -6,16 +6,16 @@ import {
   CardHeader,
   Container,
   Typography,
-} from "@material-ui/core";
-import Button from "@material-ui/core/Button";
-import { Save } from "@material-ui/icons";
-import React, { ReactElement } from "react";
+} from '@material-ui/core';
+import Button from '@material-ui/core/Button';
+import { Save } from '@material-ui/icons';
+import React, { ReactElement } from 'react';
 
-import { useParams } from "react-router";
-import { useFetchJob } from "../api/useFetch";
-import FetchWrapper from "../components/FetchWrapper";
-import PageLayout from "../layouts/PageLayout";
-import { IJob } from "../types";
+import { useParams } from 'react-router';
+import { useFetchJob } from '../api/useFetch';
+import FetchWrapper from '../components/FetchWrapper';
+import PageLayout from '../layouts/PageLayout';
+import { IJob } from '../types';
 
 interface Props {
   jobId: string;
@@ -37,7 +37,7 @@ function JobPage({ jobId }: Props): ReactElement {
                   title={
                     <Box>
                       <Typography variant="h5">
-                        {data.header || "no header found"}
+                        {data.header || 'no header found'}
                       </Typography>
                       {data.company_name && (
                         <Typography variant="subtitle1">

@@ -1,6 +1,6 @@
-import CircularProgress from "@material-ui/core/CircularProgress";
-import Typography from "@material-ui/core/Typography";
-import React, { ReactElement } from "react";
+import CircularProgress from '@material-ui/core/CircularProgress';
+import Typography from '@material-ui/core/Typography';
+import React, { ReactElement } from 'react';
 
 interface IProps {
   isLoading: boolean;
@@ -27,7 +27,7 @@ function FetchWrapper({
     return (
       <Typography>
         {errorMessage ||
-          "could not load data check console for more information"}
+          'could not load data check console for more information'}
       </Typography>
     );
   if (!isLoading && data) return children({ data, ...props });

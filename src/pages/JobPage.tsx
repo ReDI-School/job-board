@@ -8,11 +8,11 @@ import Container from '@material-ui/core/Container';
 import React, { ReactElement } from 'react';
 import Typography from '@material-ui/core/Typography';
 
-import { useParams } from "react-router";
-import { useFetchJob } from "../api/useFetch";
-import FetchWrapper from "../components/FetchWrapper";
-import PageLayout from "../layouts/PageLayout";
-import { IJob } from "../types";
+import { useParams } from 'react-router';
+import { useFetchJob } from '../api/useFetch';
+import FetchWrapper from '../components/FetchWrapper';
+import PageLayout from '../layouts/PageLayout';
+import { IJob } from '../types';
 
 interface Props {
   jobId: string;
@@ -34,7 +34,7 @@ function JobPage({ jobId }: Props): ReactElement {
                   title={
                     <Box>
                       <Typography variant="h5">
-                        {data.header || "no header found"}
+                        {data.header || 'no header found'}
                       </Typography>
                       {data.company_name && (
                         <Typography variant="subtitle1">

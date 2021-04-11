@@ -27,4 +27,4 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run Linter
-        run: yarn lint:no-fix
+        run: yarn && yarn lint:no-fix

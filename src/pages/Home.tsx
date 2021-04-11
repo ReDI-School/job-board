@@ -3,7 +3,7 @@ import PageLayout from '../layouts/PageLayout';
 import JobListing from '../components/JobListing';
 import { IJob } from '../types';
 import { useFetchJobs } from '../api/useFetch';
-import { Container } from '@material-ui/core';
+import Container from '@material-ui/core/Container';
 
 const Home = () => {
   const result = useFetchJobs();

@@ -48,5 +48,16 @@ module.exports = {
     ],
     '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
+    'no-restricted-imports': [
+      'error',
+      {
+        'name': '@material-ui/core',
+        'message': 'Please import only the necessary components to improve tree-shaking.'
+      },
+      {
+        'name': '@material-ui/icons',
+        'message': 'Please import only the necessary icons to improve tree-shaking.'
+      },
+    ]
   }
 };

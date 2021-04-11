@@ -4,7 +4,7 @@ import Card from './Card';
 import { makeStyles, createStyles } from '@material-ui/core/styles';
 import Chip from '@material-ui/core/Chip';
 import PeopleIcon from '@material-ui/icons/People';
-import { Typography } from '@material-ui/core';
+import Typography from '@material-ui/core/Typography';
 import { formatDate } from '../utils';
 import { useHistory } from 'react-router';
 

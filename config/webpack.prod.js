@@ -8,6 +8,10 @@ const config = {
     usedExports: true,
   },
   devtool: 'source-map',
+  performance: {
+    maxEntrypointSize: 350000,
+    maxAssetSize: 350000
+  }
 };
 
 module.exports = config;

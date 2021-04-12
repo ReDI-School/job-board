@@ -46,6 +46,7 @@ module.exports = {
       'error',
       'always'
     ],
+    'react/prop-types': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     'no-restricted-imports': [

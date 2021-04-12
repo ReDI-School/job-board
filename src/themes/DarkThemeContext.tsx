@@ -7,10 +7,10 @@ type DarkThemeContextValue = {
 }
 
 const DarkThemeContext = React.createContext < DarkThemeContextValue > ({
-    darkMode: false,
-    toggle: () => {
-        return;
-    }
+  darkMode: false,
+  toggle: () => {
+    return;
+  }
 });
 
 export default DarkThemeContext;

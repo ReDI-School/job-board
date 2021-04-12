@@ -38,7 +38,7 @@ export default function ButtonAppBar() {
             Publish Job Listing
           </Button>
           <Box marginLeft={1}>
-           <ThemeSwitcher />
+            <ThemeSwitcher />
           </Box>
         </Toolbar>
       </AppBar>

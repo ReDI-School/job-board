@@ -8,6 +8,8 @@ import Button from "@material-ui/core/Button";
 import PublishIcon from "@material-ui/icons/Publish";
 import { Link } from "react-router-dom";
 import { Box } from "@material-ui/core";
+// @ts-ignore
+import rediLogo from "../static/redi-logo.png";
 
 const useStyles = makeStyles(() =>
   createStyles({
@@ -17,6 +19,9 @@ const useStyles = makeStyles(() =>
     titleContainer: { flexGrow: 1 },
     unstyledLink: {
       textDecoration: "inherit",
+    },
+    logo: {
+      height: "48px",
     },
   })
 );
@@ -29,7 +34,7 @@ export default function ButtonAppBar() {
       <AppBar position="static">
         <Toolbar>
           <Box className={classes.titleContainer}>
-            <Typography
+            {/* <Typography
               to="/"
               component={Link}
               variant="h6"
@@ -37,7 +42,14 @@ export default function ButtonAppBar() {
               color="inherit"
             >
               ReDi Community Job Board
-            </Typography>
+            </Typography> */}
+            <Link to="/">
+              <img
+                src={rediLogo}
+                alt="ReDi Community Job Board"
+                className={classes.logo}
+              />
+            </Link>
           </Box>
           <Link to="/add" className={classes.unstyledLink}>
             <Button

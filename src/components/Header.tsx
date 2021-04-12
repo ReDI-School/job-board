@@ -6,6 +6,8 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 // import MenuIcon from '@material-ui/icons/Menu';
 import PublishIcon from '@material-ui/icons/Publish';
+import Box from '@material-ui/core/Box';
+import ThemeSwitcher from './ThemeSwitcher';
 
 const useStyles = makeStyles(() =>
   createStyles({
@@ -35,6 +37,9 @@ export default function ButtonAppBar() {
           >
             Publish Job Listing
           </Button>
+          <Box marginLeft={1}>
+           <ThemeSwitcher />
+          </Box>
         </Toolbar>
       </AppBar>
     </div>

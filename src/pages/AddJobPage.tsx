@@ -1,6 +1,6 @@
-import Container from "@material-ui/core/Container";
-import React, { ReactElement } from "react";
-import PageLayout from "../layouts/PageLayout";
+import Container from '@material-ui/core/Container';
+import React, { ReactElement } from 'react';
+import PageLayout from '../layouts/PageLayout';
 
 function AddJobPage(): ReactElement {
   return (

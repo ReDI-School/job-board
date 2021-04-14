@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-export const BASE_PATH=process.env.NODE_ENV==='production'? 'https://kantimam.github.io/job-board' : '';
+export const BASE_PATH=process.env.NODE_ENV==='production'? 'https://lopis.github.io/job-board' : '';
 
 export const JOBS = `${BASE_PATH}/jobs.json`;
 

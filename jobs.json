@@ -1,0 +1,72 @@
+{
+  "jobs": [
+    {
+      "id": "0eec4f01-4107-4b95-87ea-e90fc0e09c67",
+      "timestamp": "2021-04-09T23:41:23.668Z",
+      "source": "Jobs R' Us",
+      "header": "Software Enginer (w/m/d)",
+      "content": "Looking for a great software engineer. Are you a javascript rockstar? Does python tingle your jingle? They you're the right one for the job!<br>This content might contain some HTML",
+      "language": "de",
+      "experience": "senior",
+      "employment_time": "full time",
+      "poster": "John Doe",
+      "application_link": "https://www.redi-school.org",
+      "company_name": "ReDi School of Digital Integration",
+      "location": "Berlin, Germany",
+      "deadline": "June 2022",
+      "community_only": "true",
+      "contact_name": "Alice Redi"
+    },
+    {
+      "id": "0511cf7f-f1df-423d-8474-fb82b36ecf16",
+      "timestamp": "2021-04-09T23:41:23.668Z",
+      "source": "Anazing Jobs",
+      "header": "Backend Developer (w/m/d)",
+      "content": "Do you hate javascript? Does CSS give you nightmares? Did you think CSP was the name of some drug? Then get in touch<br>We're looking for a Golang rockstar with a passion for strongly typed programming languages.",
+      "language": "es",
+      "experience": "junior",
+      "employment_time": "part time",
+      "poster": "Mary Jane",
+      "application_link": "https://www.redi-school.org",
+      "company_name": "ReDi School of Digital Integration",
+      "location": "Munich, Germany",
+      "deadline": "August 2021",
+      "community_only": "false",
+      "contact_name": "Bob Redi"
+    },
+    {
+      "id": "06ea1a57-f11c-46e6-b468-ab4cb603f69b",
+      "timestamp": "2021-04-09T23:41:23.668Z",
+      "source": "Jobs R' Us",
+      "header": "Software Enginer (w/m/d)",
+      "content": "Looking for a great software engineer. Are you a javascript rockstar? Does python tingle your jingle? They you're the right one for the job!<br>This content might contain some HTML",
+      "language": "de",
+      "experience": "senior",
+      "employment_time": "full time",
+      "poster": "John Doe",
+      "application_link": "https://www.redi-school.org",
+      "company_name": "ReDi School of Digital Integration",
+      "location": "Berlin, Germany",
+      "deadline": "June 2022",
+      "community_only": "true",
+      "contact_name": "Alice Redi"
+    },
+    {
+      "id": "ec2e4d0c-e7b5-4784-94fc-ebaf475c7e81",
+      "timestamp": "2021-04-09T23:41:23.668Z",
+      "source": "Anazing Jobs",
+      "header": "Backend Developer (w/m/d)",
+      "content": "Do you hate javascript? Does CSS give you nightmares? Did you think CSP was the name of some drug? Then get in touch<br>We're looking for a Golang rockstar with a passion for strongly typed programming languages.",
+      "language": "es",
+      "experience": "junior",
+      "employment_time": "part time",
+      "poster": "Mary Jane",
+      "application_link": "https://www.redi-school.org",
+      "company_name": "ReDi School of Digital Integration",
+      "location": "Munich, Germany",
+      "deadline": "August 2021",
+      "community_only": "false",
+      "contact_name": "Bob Redi"
+    }
+  ]
+}

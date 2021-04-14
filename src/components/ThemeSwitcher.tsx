@@ -11,7 +11,7 @@ export default function ThemeSwitcher() {
 
   return (
     <IconButton onClick={toggle} title={`Switch to ${ darkMode ? 'light' : 'dark'} mode`}>
-      {darkMode ? <Brightness3Icon/> : <Brightness5Icon/>}
+      {darkMode ? <Brightness3Icon/> : <Brightness5Icon htmlColor="#ea5b25" />}
     </IconButton>
   );
 }

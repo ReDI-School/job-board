@@ -15,7 +15,7 @@ import ListItem from '@material-ui/core/ListItem';
 import IconButton from '@material-ui/core/IconButton';
 import ThemeSwitcher from './ThemeSwitcher';
 
-import rediLogo from '../static/redi-logo.png';
+import RediLogo from './RediLogo';
 
 
 const useStyles = makeStyles(() =>
@@ -41,18 +41,14 @@ export default function ButtonAppBar() {
 
           <Box className={classes.titleContainer}>
             <Link to="/">
-              <img
-                src={rediLogo}
-                alt="ReDi Community Job Board"
-                className={classes.logo}
-              />
+              <RediLogo className={classes.logo} />
             </Link>
           </Box>
           <Hidden smDown>
             <Link to="/add" className={classes.unstyledLink}>
               <Button
                 variant="contained"
-                color="default"
+                color="secondary"                
                 startIcon={<PublishIcon />}
               >
                 Publish Job Listing
@@ -81,7 +77,7 @@ export default function ButtonAppBar() {
                   <Link to="/add" className={classes.unstyledLink}>
                     <Button
                       variant="contained"
-                      color="default"
+                      color="secondary"
                       startIcon={<PublishIcon />}
                     >
                       Publish Job Listing

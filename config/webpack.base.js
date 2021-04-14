@@ -24,10 +24,16 @@ const config = {
         loader: 'ts-loader',
         exclude: /node_modules/,
       },
+      {
+        test: /\.(jpg|png)$/,
+        use: {
+          loader: 'url-loader',
+        },
+      },
     ],
   },
 
-  plugins: [htmlPlugin]
+  plugins: [htmlPlugin],
 };
 
 module.exports = config;

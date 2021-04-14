@@ -2,7 +2,7 @@ import React from 'react';
 import Home from './pages/Home';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { ThemeProvider } from '@material-ui/core/styles';
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter as Router } from 'react-router-dom'; // change this back to BrowserRouter once we dont use gh pages anymore
 import { Route, Switch } from 'react-router-dom';
 import { JobPageRoute } from './pages/JobPage';
 import AddJobPage from './pages/AddJobPage';
@@ -16,8 +16,7 @@ const App = () => {
   const { darkMode } = useDarkMode();
   return (
     <ThemeProvider theme={ darkMode ? darkTheme : lightTheme }>
-
-      <BrowserRouter>
+      <Router> 
         <CssBaseline />
         <Switch>
           <Route path="/job/:jobId">
@@ -30,7 +29,7 @@ const App = () => {
             <Home />
           </Route>
         </Switch>
-      </BrowserRouter>
+      </Router>
     </ThemeProvider>
 
   );

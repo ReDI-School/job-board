@@ -21,7 +21,7 @@
   "bugs": {
     "url": "https://github.com/lopis/job-board/issues"
   },
-  "homepage": "https://github.com/lopis/job-board#readme",
+  "homepage": "https://lopis.github.io/job-board/",
   "devDependencies": {
     "@babel/plugin-proposal-class-properties": "^7.13.0",
     "@babel/preset-react": "^7.13.13",
@@ -36,6 +36,7 @@
     "babel-preset-react": "^6.24.1",
     "copy-webpack-plugin": "^8.1.1",
     "css-loader": "^5.2.0",
+    "dotenv-webpack": "^7.0.2",
     "eslint": "^7.23.0",
     "eslint-plugin-react": "^7.23.2",
     "file-loader": "^6.2.0",

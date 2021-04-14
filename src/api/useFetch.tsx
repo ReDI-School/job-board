@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 
-export const JOBS = '/jobs.json';
+export const BASE_PATH=process.env.NODE_ENV==='production'? 'https://kantimam.github.io/job-board' : '';
+
+export const JOBS = `${BASE_PATH}/jobs.json`;
 
 interface IFetchState {
   data: any,
@@ -41,7 +43,7 @@ const useFetch = (url: string): IFetchState => {
 };
 
 const useFetchJobs = () => useFetch(JOBS);
-const useFetchJob = (jobId: string) => useFetch(`/jobForId/${jobId}.json`);
+const useFetchJob = (jobId: string) => useFetch(`${BASE_PATH}/jobForId/${jobId}.json`);
 
 export { useFetchJobs, useFetchJob };
 

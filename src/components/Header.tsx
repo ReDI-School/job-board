@@ -12,6 +12,7 @@ import Drawer from '@material-ui/core/Drawer';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import IconButton from '@material-ui/core/IconButton';
+import ThemeSwitcher from './ThemeSwitcher';
 
 import rediLogo from '../static/redi-logo.png';
 
@@ -54,6 +55,9 @@ export default function ButtonAppBar() {
                 Publish Job Listing
               </Button>
             </Link>
+            <Box marginLeft={1}>
+              <ThemeSwitcher />
+            </Box>
           </Hidden>
           <Hidden mdUp>
             <IconButton onClick={() => setDrawerOpen(true)}>
@@ -65,6 +69,11 @@ export default function ButtonAppBar() {
               onClose={() => setDrawerOpen(false)}
             >
               <List>
+                <ListItem>
+                  <Box marginLeft={1}>
+                    <ThemeSwitcher />
+                  </Box>
+                </ListItem>
                 <ListItem>
                   <Link to="/add" className={classes.unstyledLink}>
                     <Button

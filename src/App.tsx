@@ -17,20 +17,20 @@ const App = () => {
   return (
     <ThemeProvider theme={ darkMode ? darkTheme : lightTheme }>
 
-    <BrowserRouter>
-      <CssBaseline />
-      <Switch>
-        <Route path="/job/:jobId">
-          <JobPageRoute />
-        </Route>
-        <Route path="/add">
-          <AddJobPage />
-        </Route>
-        <Route>
-          <Home />
-        </Route>
-      </Switch>
-    </BrowserRouter>
+      <BrowserRouter>
+        <CssBaseline />
+        <Switch>
+          <Route path="/job/:jobId">
+            <JobPageRoute />
+          </Route>
+          <Route path="/add">
+            <AddJobPage />
+          </Route>
+          <Route>
+            <Home />
+          </Route>
+        </Switch>
+      </BrowserRouter>
     </ThemeProvider>
 
   );

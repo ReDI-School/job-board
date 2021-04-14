@@ -5,6 +5,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Button from '@material-ui/core/Button';
 import MenuIcon from '@material-ui/icons/Menu';
 import PublishIcon from '@material-ui/icons/Publish';
+
 import { Link } from 'react-router-dom';
 import Box from '@material-ui/core/Box';
 import Hidden from '@material-ui/core/Hidden';
@@ -15,6 +16,7 @@ import IconButton from '@material-ui/core/IconButton';
 import ThemeSwitcher from './ThemeSwitcher';
 
 import rediLogo from '../static/redi-logo.png';
+
 
 const useStyles = makeStyles(() =>
   createStyles({
@@ -36,6 +38,7 @@ export default function ButtonAppBar() {
     <>
       <AppBar color="inherit" position="fixed">
         <Toolbar>
+
           <Box className={classes.titleContainer}>
             <Link to="/">
               <img
@@ -88,6 +91,7 @@ export default function ButtonAppBar() {
               </List>
             </Drawer>
           </Hidden>
+
         </Toolbar>
       </AppBar>
       <Toolbar />

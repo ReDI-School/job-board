@@ -13,10 +13,15 @@ import { useFetchJob } from '../api/useFetch';
 import FetchWrapper from '../components/FetchWrapper';
 import PageLayout from '../layouts/PageLayout';
 import { IJob } from '../types';
+import { formatDate } from '../utils';
+import CompanyInfo from '../components/jobInfo/CompanyInfo';
+import JobTagsList from '../components/jobInfo/JobTagsList';
+import CommunityOnlyBadge from '../components/jobInfo/CommunityOnlyBadge';
 
 interface Props {
   jobId: string;
 }
+
 
 /** Page that displays the job for the provided jobId */
 function JobPage({ jobId }: Props): ReactElement {
@@ -33,38 +38,51 @@ function JobPage({ jobId }: Props): ReactElement {
                   /* avatar={data?.icon ? <Avatar>A</Avatar> : null} */
                   title={
                     <Box>
-                      <Typography variant="h5">
-                        {data.header || 'no header found'}
-                      </Typography>
-                      {data.company_name && (
-                        <Typography variant="subtitle1">
-                          {data.company_name}
+                      <Box display="flex" alignItems="center" flexWrap="wrap">
+                        <Typography variant="h5">
+                          {data.header || 'no header found'} 
                         </Typography>
-                      )}
-                      {data.location && (
-                        <Typography variant="subtitle1">
-                          {data.location}
-                        </Typography>
-                      )}
+                        <CommunityOnlyBadge isCommunityOnly={true}/>
+                      </Box>
+                      
+                      <CompanyInfo companyName={data.company_name} companyLocation={data.location}/>
+                      <JobTagsList job={data}/>
                     </Box>
                   }
                   action={
-                    <Button
-                      variant="contained"
-                      color="primary"
-                      startIcon={<Save />}
-                    >
-                      Save
-                    </Button>
+                  <Button
+                    href={data.application_link}
+                    target="_blank"
+                    variant="contained"
+                    color="primary"
+                    startIcon={<Save />}
+                  >
+                    Apply
+                  </Button>
                   }
                 />
                 <CardContent>
+                  <Box>
+
+                    <Typography>
+
+                    </Typography>
+                  </Box>
                   {/* you could use the library react-html-parser too but: its
                   pretty outdated (needs polyfills and different react version /
                   -force flag)*/}
                   {data.content && (
-                    <div dangerouslySetInnerHTML={{ __html: data.content }} />
+                    <Typography component="div" dangerouslySetInnerHTML={{ __html: data.content }} />
                   )}
+                  <Box marginTop={2}> {/* make this some fancy component */}
+                    <Typography>Added <strong>{formatDate(data.timestamp)}</strong> by {data.poster || "Anon"}</Typography>
+                  </Box>
+                  {data.deadline && <Typography>
+                    Deadline: <strong>{data.deadline}</strong>
+                  </Typography>}
+                  {data.source && <Typography>
+                    Source: <strong>{data.source}</strong>
+                  </Typography>}
                 </CardContent>
               </Card>
             )}

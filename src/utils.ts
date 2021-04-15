@@ -14,3 +14,9 @@ export const formatDate = (isoDate: string): string => {
     return '';
   }
 };
+
+export const jobFieldFormatters:any={
+  "community_only": (val:string, trueString: string="community only")=>val==="true"? trueString : null
+    
+  
+}

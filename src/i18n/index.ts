@@ -1,9 +1,7 @@
-
 import enTranslationMessages from '../../translations/en.json';
 
 const LANGUAGES = ['en'];
 const DEFAULT_LOCALE = 'en';
-
 
 const translationMessages: { [locale: string]: { [key: string]: string } } = {
   en: enTranslationMessages as { [key: string]: string },
@@ -12,7 +10,6 @@ const translationMessages: { [locale: string]: { [key: string]: string } } = {
 export const getTranslationMessages = (locale: string) => {
   return translationMessages[locale] || translationMessages[DEFAULT_LOCALE];
 };
-
 
 export function getLocale() {
   const browserLang = window.navigator.language;
@@ -26,7 +23,6 @@ export function getLocale() {
 
   return DEFAULT_LOCALE;
 }
-
 
 export { IntlProvider } from './IntlContext';
 export { default as FormattedMessage } from './FormattedMessage';

@@ -11,25 +11,32 @@ import lightTheme from './themes/light';
 import darkTheme from './themes/dark';
 import useDarkMode from './themes/useDarkMode';
 
+import {IntlProvider, getLocale, getTranslationMessages } from './i18n';
+
+const locale = getLocale();
+const translationMessages = getTranslationMessages(locale);
+
 const App = () => {
 
   const { darkMode } = useDarkMode();
   return (
     <ThemeProvider theme={ darkMode ? darkTheme : lightTheme }>
-      <Router> 
-        <CssBaseline />
-        <Switch>
-          <Route path="/job/:jobId">
-            <JobPageRoute />
-          </Route>
-          <Route path="/add">
-            <AddJobPage />
-          </Route>
-          <Route>
-            <Home />
-          </Route>
-        </Switch>
-      </Router>
+      <IntlProvider messages={translationMessages}>
+        <Router> 
+          <CssBaseline />
+          <Switch>
+            <Route path="/job/:jobId">
+              <JobPageRoute />
+            </Route>
+            <Route path="/add">
+              <AddJobPage />
+            </Route>
+            <Route>
+              <Home />
+            </Route>
+          </Switch>
+        </Router>
+      </IntlProvider>
     </ThemeProvider>
 
   );

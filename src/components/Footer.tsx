@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import Grid from'@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
-import {Link} from 'react-router-dom';
+//import {Link} from 'react-router-dom';
 import Facebook from '@material-ui/icons/Facebook';
 import Tweeter from '@material-ui/icons/Twitter';
 

@@ -1,17 +1,15 @@
 import { useState, useEffect } from 'react';
 
-export const BASE_PATH =
-  process.env.NODE_ENV === 'production'
-    ? 'https://redi-school.github.io/job-board'
-    : '';
+export const BASE_PATH='http://ec2-35-157-92-9.eu-central-1.compute.amazonaws.com';
+//export const BASE_PATH="http://localhost:8000";
 
-export const JOBS = `${BASE_PATH}/jobs.json`;
+export const JOBS = `${BASE_PATH}`;
 
 interface IFetchState {
-  data: any;
-  isLoading: boolean;
-  hasError: boolean;
-  errorMessage: string;
+  data: any,
+  isLoading: boolean,
+  hasError: boolean,
+  errorMessage: string,
 }
 
 const useFetch = (url: string): IFetchState => {
@@ -46,8 +44,7 @@ const useFetch = (url: string): IFetchState => {
 };
 
 const useFetchJobs = () => useFetch(JOBS);
-const useFetchJob = (jobId: string) =>
-  useFetch(`${BASE_PATH}/jobForId/${jobId}.json`);
+const useFetchJob = (jobId: string) => useFetch(`${JOBS}/${jobId}`);
 
 export { useFetchJobs, useFetchJob };
 

@@ -23,9 +23,9 @@ const useStyles = makeStyles((theme: Theme) =>
 
     },
     icon:{
-      color:'theme.palette.secondary.main',
+      color:theme.palette.secondary.main,
       '&:hover':{
-        fill:'theme.palette.primary.dark',
+        fill:theme.palette.primary.dark,
         fontSize:'1.3rem'
       }
     }
@@ -40,18 +40,23 @@ const Footer = () => {
         <Grid item className={classes.link} >
           <Hidden mdDown>
             <Grid container justify='space-around' spacing={2}>
-              <Grid item  /*component={Link} to="/"*/ >Home</Grid>
-              <Grid item  /*component={Link} to="/About"*/ >Redi School</Grid>
-              <Grid item  /*component={Link} to="/Redi"*/ >Copyright</Grid>
+              <Grid item  /*component={Link} to="/"*/ >
+                 Home</Grid>
+              <Grid item  /*component={Link} to="/About"*/ >
+                Redi School</Grid>
+              <Grid item  /*component={Link} to="/Redi"*/ >
+                Copyright</Grid>
             </Grid>
           </Hidden>
         </Grid>
         <Grid item className={classes.link} >
           <Grid container>
-            <Grid item /*component={"a"} herf="http://www.facebook.com" rel="noopener noreferrer" target="_blank"*/>
+            <Grid item component={'a'} href="https://www.facebook.com/search/top?q=redi%20school%20of%20digital%20integration"
+              rel="noopener noreferrer" target="_blank">
               <Facebook className={classes.icon}/>
             </Grid>
-            <Grid item /*component={"a"} herf="http://www.facebook.com" rel="noopener noreferrer" target="_blank"*/>
+            <Grid item component={'a'} href="https://twitter.com/ReDISchool"
+              rel="noopener noreferrer" target="_blank">
               <Tweeter className={classes.icon}/>
             </Grid>
           </Grid>

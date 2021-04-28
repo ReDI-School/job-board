@@ -36,7 +36,7 @@ const JobListing = ({ job }: Props) => {
   const history = useHistory();
 
   return (
-    <article className={classes.root}>
+    <article className={classes.root} data-testid="job" >
       <Card
         title={job.header}
         description={job.content}

@@ -5,6 +5,7 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import Sanitize from './Sanitize';
 
 const useStyles = makeStyles({
   root: {
@@ -38,7 +39,7 @@ const SimpleCard = ({
         )}
         {description && (
           <Typography variant="body2" color="textSecondary" component="p">
-            {description}
+            <Sanitize inline htmlOrMarkdown={description} />
           </Typography>
         )}
         {children}

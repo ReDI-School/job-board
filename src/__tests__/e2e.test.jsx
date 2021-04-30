@@ -20,4 +20,10 @@ describe('Test Suite', () => {
     expect(jobs.length).toEqual(jobsData.jobs.length);
 
   });
+
+  it('renders markdown', async () => {
+    const { findByText } = render(<App />);
+    const markdown = await findByText('Markdown');
+    expect(markdown.nodeName).toEqual('EM');
+  });
 });

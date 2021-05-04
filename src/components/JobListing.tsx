@@ -7,7 +7,6 @@ import PeopleIcon from '@material-ui/icons/People';
 import Typography from '@material-ui/core/Typography';
 import { formatDate } from '../utils';
 import { useHistory } from 'react-router';
-import { JOBS } from '../api/useFetch';
 
 interface Props {
   job: IJob;

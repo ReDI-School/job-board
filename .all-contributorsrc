@@ -12,7 +12,9 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/2715751?v=4",
       "profile": "http://www.jlopes.dev",
       "contributions": [
-        "code"
+        "code",
+        "review",
+        "projectManagement",
       ]
     },
     {
@@ -21,7 +23,9 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/24353308?v=4",
       "profile": "https://kantimam.org/",
       "contributions": [
-        "review"
+        "code",
+        "review",
+        "infra"
       ]
     }
   ],

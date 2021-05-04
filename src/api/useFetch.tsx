@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-export const BASE_PATH='http://ec2-35-157-92-9.eu-central-1.compute.amazonaws.com';
+export const BASE_PATH='https://ec2-35-157-92-9.eu-central-1.compute.amazonaws.com';
 //export const BASE_PATH="http://localhost:8000";
 
 export const JOBS = `${BASE_PATH}`;

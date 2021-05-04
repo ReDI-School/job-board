@@ -13,6 +13,7 @@ import { useFetchJob } from '../api/useFetch';
 import FetchWrapper from '../components/FetchWrapper';
 import PageLayout from '../layouts/PageLayout';
 import { IJob } from '../types';
+import Sanitize from '../components/Sanitize';
 
 interface Props {
   jobId: string;
@@ -59,11 +60,8 @@ function JobPage({ jobId }: Props): ReactElement {
                   }
                 />
                 <CardContent>
-                  {/* you could use the library react-html-parser too but: its
-                  pretty outdated (needs polyfills and different react version /
-                  -force flag)*/}
                   {data.content && (
-                    <div dangerouslySetInnerHTML={{ __html: data.content }} />
+                    <Sanitize htmlOrMarkdown={data.content} />
                   )}
                 </CardContent>
               </Card>

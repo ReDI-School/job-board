@@ -14,6 +14,7 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import IconButton from '@material-ui/core/IconButton';
 import ThemeSwitcher from './ThemeSwitcher';
+import { FormattedMessage } from '../i18n';
 
 import RediLogo from './RediLogo';
 
@@ -51,7 +52,7 @@ export default function ButtonAppBar() {
                 color="secondary"                
                 startIcon={<PublishIcon />}
               >
-                Publish Job Listing
+                <FormattedMessage id="publishJobListing"/>
               </Button>
             </Link>
             <Box marginLeft={1}>
@@ -80,7 +81,7 @@ export default function ButtonAppBar() {
                       color="secondary"
                       startIcon={<PublishIcon />}
                     >
-                      Publish Job Listing
+                      <FormattedMessage id="publishJobListing"/>
                     </Button>
                   </Link>
                 </ListItem>

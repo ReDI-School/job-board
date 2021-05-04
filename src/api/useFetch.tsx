@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react';
 
-export const BASE_PATH=process.env.NODE_ENV==='production'? 'https://lopis.github.io/job-board' : '';
+export const BASE_PATH='https://jobs-api.communityredi.school';
+//export const BASE_PATH="http://localhost:8000";
 
-export const JOBS = `${BASE_PATH}/jobs.json`;
+export const JOBS = `${BASE_PATH}`;
 
 interface IFetchState {
   data: any,
@@ -43,7 +44,7 @@ const useFetch = (url: string): IFetchState => {
 };
 
 const useFetchJobs = () => useFetch(JOBS);
-const useFetchJob = (jobId: string) => useFetch(`${BASE_PATH}/jobForId/${jobId}.json`);
+const useFetchJob = (jobId: string) => useFetch(`${JOBS}/${jobId}`);
 
 export { useFetchJobs, useFetchJob };
 

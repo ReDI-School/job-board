@@ -3,6 +3,8 @@
 This is the open source ReDI Job Board. This board was created and is maintained by volunteers, teachers and students from [ReDi School](redi-school.org).
 
 ![Linter](https://github.com/lopis/job-board/actions/workflows/linter.yml/badge.svg)
+![Unit Tests](https://github.com/lopis/job-board/actions/workflows/test.yml/badge.svg)
+![Deploy](https://github.com/lopis/job-board/actions/workflows/deploy.yml/badge.svg)
 
 ## Development setup
 

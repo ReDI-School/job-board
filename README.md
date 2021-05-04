@@ -66,6 +66,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tr>
     <td align="center"><a href="http://www.jlopes.dev"><img src="https://avatars.githubusercontent.com/u/2715751?v=4?s=100" width="100px;" alt=""/><br /><sub><b>João Lopes</b></sub></a><br /><a href="https://github.com/ReDI-School/job-board/commits?author=lopis" title="Code">💻</a></td>
+    <td align="center"><a href="https://kantimam.org/"><img src="https://avatars.githubusercontent.com/u/24353308?v=4?s=100" width="100px;" alt=""/><br /><sub><b>kant imam</b></sub></a><br /><a href="https://github.com/ReDI-School/job-board/commits?author=kantimam" title="Code">💻</a><a href="https://github.com/ReDI-School/job-board/pulls?q=is%3Apr+reviewed-by%3Akantimam" title="Reviewed Pull Requests">👀</a></td>
   </tr>
 </table>
 

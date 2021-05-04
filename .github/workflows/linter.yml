@@ -27,4 +27,4 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run Jest
-        run: yarn && yarn test
+        run: yarn && yarn lint:no-fix

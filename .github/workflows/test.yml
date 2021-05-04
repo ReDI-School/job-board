@@ -13,5 +13,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Run Linter
+      - name: Run Unit Tests
         run: yarn && yarn test

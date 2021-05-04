@@ -56,8 +56,22 @@ Ideally, you would not need to worry about respecting the code style if you setu
 
 If you use VSCode, you'll want to install [Editor Config](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig) and [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint). It's also useful to enable the setting `"editor.formatOnSave": true` to automatically format your code when you save a file.
 
-## List of contributors
+## Contributors ✨
 
-<a href="https://github.com/lopis/job-board/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=lopis/job-board" />
-</a>
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="http://www.jlopes.dev"><img src="https://avatars.githubusercontent.com/u/2715751?v=4?s=100" width="100px;" alt=""/><br /><sub><b>João Lopes</b></sub></a><br /><a href="https://github.com/ReDI-School/job-board/commits?author=lopis" title="Code">💻</a></td>
+  </tr>
+</table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!

@@ -59,12 +59,6 @@ Ideally, you would not need to worry about respecting the code style if you setu
 
 If you use VSCode, you'll want to install [Editor Config](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig) and [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint). It's also useful to enable the setting `"editor.formatOnSave": true` to automatically format your code when you save a file.
 
-## List of contributors
-
-<a href="https://github.com/lopis/job-board/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=lopis/job-board" />
-</a>
-
 ## Contributors ✨
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):

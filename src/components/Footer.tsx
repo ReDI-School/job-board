@@ -12,21 +12,21 @@ const useStyles = makeStyles((theme: Theme) =>
     root: {
       flexGrow: 1,
     },
-    mainContainer:{
+    mainContainer: {
       position: 'absolute'
     },
-    link:{
+    link: {
       color: theme.palette.secondary.main,
       fontFamily: 'Arial',
       fontSize: '1rem',
-      textDecoration:'none'
+      textDecoration: 'none'
 
     },
-    icon:{
-      color:theme.palette.secondary.main,
-      '&:hover':{
-        fill:theme.palette.primary.dark,
-        fontSize:'1.3rem'
+    icon: {
+      color: theme.palette.secondary.main,
+      '&:hover': {
+        fill: theme.palette.primary.dark,
+        fontSize: '1.3rem'
       }
     }
   }),

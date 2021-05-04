@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack serve --open --env dev",
-    "lint": "eslint --ext .js,.ts,tsx . --fix",
+    "lint": "eslint --ext .js,.ts,.tsx . --fix",
     "lint:no-fix": "eslint --ext .js,.ts,tsx .",
     "build": "webpack --env prod",
     "analyze": "webpack --env prod --profile --json > build/stats.json && webpack-bundle-analyzer build/stats.json"

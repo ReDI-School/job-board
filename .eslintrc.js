@@ -46,9 +46,18 @@ module.exports = {
       'error',
       'always'
     ],
+    'key-spacing': [
+      'error',
+      {
+        'beforeColon': false,
+        'afterColon': true,
+        'mode': 'strict'
+      }
+    ],
     'react/prop-types': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
+
     'no-restricted-imports': [
       'error',
       {

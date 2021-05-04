@@ -12,9 +12,9 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/2715751?v=4",
       "profile": "http://www.jlopes.dev",
       "contributions": [
-        "code",
         "review",
-        "projectManagement",
+        "code",
+        "projectManagement"
       ]
     },
     {
@@ -27,6 +27,33 @@
         "review",
         "infra"
       ]
+    },
+    {
+      "login": "maroun-baydoun",
+      "name": "Maroun Baydoun",
+      "avatar_url": "https://avatars.githubusercontent.com/u/717143?v=4",
+      "profile": "https://maroun-baydoun.com/",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "juliandnl",
+      "name": "Julian Kortendieck",
+      "avatar_url": "https://avatars.githubusercontent.com/u/51905839?v=4",
+      "profile": "https://github.com/juliandnl",
+      "contributions": [
+        "review"
+      ]
+    },
+    {
+      "login": "jon-braz",
+      "name": "Jon Braz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26111569?v=4",
+      "profile": "https://github.com/jon-braz",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
@@ -34,5 +61,6 @@
   "projectOwner": "ReDI-School",
   "repoType": "github",
   "repoHost": "https://github.com",
-  "skipCi": true
+  "skipCi": true,
+  "commitConvention": "none"
 }

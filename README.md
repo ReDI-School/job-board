@@ -58,21 +58,22 @@ If you use VSCode, you'll want to install [Editor Config](https://marketplace.vi
 
 ## Contributors ✨
 
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+Thanks goes to these wonderful people ([all-contributors](https://github.com/all-contributors/all-contributors) specification):
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="http://www.jlopes.dev"><img src="https://avatars.githubusercontent.com/u/2715751?v=4?s=100" width="100px;" alt=""/><br /><sub><b>João Lopes</b></sub></a><br /><a href="https://github.com/ReDI-School/job-board/commits?author=lopis" title="Code">💻</a></td>
-    <td align="center"><a href="https://kantimam.org/"><img src="https://avatars.githubusercontent.com/u/24353308?v=4?s=100" width="100px;" alt=""/><br /><sub><b>kant imam</b></sub></a><br /><a href="https://github.com/ReDI-School/job-board/commits?author=kantimam" title="Code">💻</a><a href="https://github.com/ReDI-School/job-board/pulls?q=is%3Apr+reviewed-by%3Akantimam" title="Reviewed Pull Requests">👀</a></td>
+    <td align="center"><a href="http://www.jlopes.dev"><img src="https://avatars.githubusercontent.com/u/2715751?v=4?s=100" width="100px;" alt=""/><br /><sub><b>João Lopes</b></sub></a><br /><a href="https://github.com/ReDI-School/job-board/pulls?q=is%3Apr+reviewed-by%3Alopis" title="Reviewed Pull Requests">👀</a> <a href="https://github.com/ReDI-School/job-board/commits?author=lopis" title="Code">💻</a> <a href="#projectManagement-lopis" title="Project Management">📆</a></td>
+    <td align="center"><a href="https://kantimam.org/"><img src="https://avatars.githubusercontent.com/u/24353308?v=4?s=100" width="100px;" alt=""/><br /><sub><b>kant imam</b></sub></a><br /><a href="https://github.com/ReDI-School/job-board/commits?author=kantimam" title="Code">💻</a> <a href="https://github.com/ReDI-School/job-board/pulls?q=is%3Apr+reviewed-by%3Akantimam" title="Reviewed Pull Requests">👀</a> <a href="#infra-kantimam" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a></td>
+    <td align="center"><a href="https://maroun-baydoun.com/"><img src="https://avatars.githubusercontent.com/u/717143?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Maroun Baydoun</b></sub></a><br /><a href="https://github.com/ReDI-School/job-board/commits?author=maroun-baydoun" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/juliandnl"><img src="https://avatars.githubusercontent.com/u/51905839?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Julian Kortendieck</b></sub></a><br /><a href="https://github.com/ReDI-School/job-board/pulls?q=is%3Apr+reviewed-by%3Ajuliandnl" title="Reviewed Pull Requests">👀</a></td>
+    <td align="center"><a href="https://github.com/jon-braz"><img src="https://avatars.githubusercontent.com/u/26111569?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Jon Braz</b></sub></a><br /><a href="https://github.com/ReDI-School/job-board/commits?author=jon-braz" title="Code">💻</a></td>
   </tr>
 </table>
 
 <!-- markdownlint-restore -->
 <!-- prettier-ignore-end -->
 
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+<!-- ALL-CONTRIBUTORS-LIST:END -->.

@@ -9,7 +9,7 @@ const Home = () => {
   const result = useFetchJobs();
 
   const { data, isLoading } = result;
-  const jobs = data?.jobs;
+  const jobs = data;
 
   return (
     <PageLayout>

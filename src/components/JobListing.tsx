@@ -7,6 +7,7 @@ import PeopleIcon from '@material-ui/icons/People';
 import Typography from '@material-ui/core/Typography';
 import { formatDate } from '../utils';
 import { useHistory } from 'react-router';
+import { JOBS } from '../api/useFetch';
 
 interface Props {
   job: IJob;
@@ -39,16 +40,16 @@ const JobListing = ({ job }: Props) => {
     <article className={classes.root} data-testid="job" >
       <Card
         title={job.header}
-        description={job.content}
+        description={job.content.substring(0, 260)}
         onActionClicked={() => history.push(`/job/${job.id}`)}
       >
-        <Chip
+        { <Chip
           className={classes.chip}
-          label={job.employment_time}
+          label={job.employment_type}
           color="primary"
-        />
-        <Chip className={classes.chip} label={job.experience} />
-        {job.community_only === 'true' && (
+        />}
+        {job.experience_level && <Chip className={classes.chip} label={job.experience_level} />}
+        {job.redi_community_only === 'true' && (
           <Chip
             className={classes.chip}
             icon={<PeopleIcon fontSize="small" />}
@@ -56,9 +57,9 @@ const JobListing = ({ job }: Props) => {
             color="secondary"
           />
         )}
-        <Typography variant="caption" className={classes.date}>
-          {formatDate(job.timestamp)}
-        </Typography>
+        {job.zeitstempel && <Typography variant="caption" className={classes.date}>
+          {formatDate(job.zeitstempel)}
+        </Typography>}
       </Card>
     </article>
   );

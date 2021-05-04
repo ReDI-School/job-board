@@ -21,7 +21,7 @@
   "bugs": {
     "url": "https://github.com/redi-school/job-board/issues"
   },
-  "homepage": "https://redi-school.github.io/job-board/",
+  "homepage": "https://jobs.communityredi.school",
   "devDependencies": {
     "@babel/plugin-proposal-class-properties": "^7.13.0",
     "@babel/preset-env": "^7.13.15",

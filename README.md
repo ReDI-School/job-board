@@ -70,6 +70,7 @@ Thanks goes to these wonderful people ([all-contributors](https://github.com/all
     <td align="center"><a href="https://maroun-baydoun.com/"><img src="https://avatars.githubusercontent.com/u/717143?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Maroun Baydoun</b></sub></a><br /><a href="https://github.com/ReDI-School/job-board/commits?author=maroun-baydoun" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/juliandnl"><img src="https://avatars.githubusercontent.com/u/51905839?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Julian Kortendieck</b></sub></a><br /><a href="https://github.com/ReDI-School/job-board/pulls?q=is%3Apr+reviewed-by%3Ajuliandnl" title="Reviewed Pull Requests">👀</a></td>
     <td align="center"><a href="https://github.com/jon-braz"><img src="https://avatars.githubusercontent.com/u/26111569?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Jon Braz</b></sub></a><br /><a href="https://github.com/ReDI-School/job-board/commits?author=jon-braz" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/mojvaf"><img src="https://avatars.githubusercontent.com/u/20312771?v=4?s=100" width="100px;" alt=""/><br /><sub><b>mojvaf</b></sub></a><br /><a href="https://github.com/ReDI-School/job-board/commits?author=mojvaf" title="Code">💻</a></td>
   </tr>
 </table>
 

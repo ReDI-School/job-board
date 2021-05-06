@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
-import Grid from'@material-ui/core/Grid';
+import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
 //import {Link} from 'react-router-dom';
 import Facebook from '@material-ui/icons/Facebook';
@@ -16,18 +16,15 @@ const useStyles = makeStyles((theme: Theme) =>
       position: 'absolute'
     },
     link: {
-      color: theme.palette.secondary.main,
+      color: '#333',
       fontFamily: 'Arial',
       fontSize: '1rem',
       textDecoration: 'none'
 
     },
     icon: {
-      color: theme.palette.secondary.main,
-      '&:hover': {
-        fill: theme.palette.primary.dark,
-        fontSize: '1.3rem'
-      }
+      color: '#333',
+      marginRight: '0.3em'
     }
   }),
 );
@@ -36,12 +33,12 @@ const Footer = () => {
   const classes = useStyles();
   return (
     <footer>
-      <Grid container justify='space-around'  className={classes.mainContainer}>
+      <Grid container justify='space-around' className={classes.mainContainer}>
         <Grid item className={classes.link} >
           <Hidden mdDown>
             <Grid container justify='space-around' spacing={2}>
               <Grid item  /*component={Link} to="/"*/ >
-                 Home</Grid>
+                Home</Grid>
               <Grid item  /*component={Link} to="/About"*/ >
                 Redi School</Grid>
               <Grid item  /*component={Link} to="/Redi"*/ >
@@ -53,11 +50,11 @@ const Footer = () => {
           <Grid container>
             <Grid item component={'a'} href="https://www.facebook.com/search/top?q=redi%20school%20of%20digital%20integration"
               rel="noopener noreferrer" target="_blank">
-              <Facebook className={classes.icon}/>
+              <Facebook className={classes.icon} />
             </Grid>
             <Grid item component={'a'} href="https://twitter.com/ReDISchool"
               rel="noopener noreferrer" target="_blank">
-              <Tweeter className={classes.icon}/>
+              <Tweeter className={classes.icon} />
             </Grid>
           </Grid>
         </Grid>

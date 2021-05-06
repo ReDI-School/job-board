@@ -9,10 +9,10 @@ export interface IJob {
   experience_level: string,
   employment_type: string,
   poster: string,
-  application_link: string,
-  company_name: string,
+  link: string,
+  company: string,
   location: string,
   deadline: string,
   redi_community_only: string,
-  contact_name: string,
+  contact_person: string,
 }

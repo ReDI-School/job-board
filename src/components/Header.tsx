@@ -49,10 +49,10 @@ export default function ButtonAppBar() {
             <Link to="/add" className={classes.unstyledLink}>
               <Button
                 variant="contained"
-                color="secondary"                
+                color="secondary"
                 startIcon={<PublishIcon />}
               >
-                <FormattedMessage id="publishJobListing"/>
+                <FormattedMessage id="publishJobListing" />
               </Button>
             </Link>
             <Box marginLeft={1}>
@@ -81,7 +81,7 @@ export default function ButtonAppBar() {
                       color="secondary"
                       startIcon={<PublishIcon />}
                     >
-                      <FormattedMessage id="publishJobListing"/>
+                      <FormattedMessage id="publishJobListing" />
                     </Button>
                   </Link>
                 </ListItem>

@@ -28,7 +28,10 @@ const Hero=()=> {
 
 
   return (
-    <Grid container direction="column">
+    <Grid container
+    direction="column"
+     style={{backgroundColor:"gray"}}
+      >
      <Grid item style={{ marginTop: "2rem", marginLeft: "15rem"}}>
        <Typography variant='h3' color="secondary">Filter</Typography>
      </Grid>

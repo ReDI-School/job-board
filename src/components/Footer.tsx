@@ -25,8 +25,8 @@ const useStyles = makeStyles((theme: Theme) =>
     icon: {
       color: theme.palette.secondary.main,
       '&:hover': {
-        fill: theme.palette.primary.dark,
-        fontSize: '1.3rem'
+        fill: theme.palette.primary.main
+
       }
     }
   }),

@@ -20,13 +20,11 @@ const useStyles = makeStyles((theme: Theme) =>
       fontFamily: 'Arial',
       fontSize: '1rem',
       textDecoration: 'none'
-
     },
     icon: {
       color: theme.palette.secondary.main,
       '&:hover': {
         fill: theme.palette.primary.main
-
       }
     }
   }),

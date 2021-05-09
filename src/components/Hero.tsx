@@ -1,4 +1,5 @@
 import React from 'react';
+import { makeStyles, createStyles } from '@material-ui/core/styles';
 import FormGroup from '@material-ui/core/FormGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Switch from '@material-ui/core/Switch';
@@ -8,28 +9,51 @@ import TextField  from '@material-ui/core/TextField';
 import InputAdornment from '@material-ui/core/InputAdornment';
 import AddIcon from '@material-ui/icons/Add';
 
+const useStyles = makeStyles(() =>
+  createStyles({
+    root: {
+       backgroundColor: '#e0e0e0'
+    },
+    grid: {
+      marginTop: '2rem',
+      marginLeft: '15rem'
+    },
+    textField: {
+      width: '35em',
+      marginLeft: '15rem'
+    },
+    formGroup:{
+      marginLeft: '14rem',
+      marginTop: '2rem'
+    }
+  })
+);
 
-const Hero=()=> {
+const Hero = () => {
+  const classes = useStyles();
+
 
   return (
     <Grid container
+      className={classes.root}
       direction="column"
-      style={{backgroundColor: 'gray'}}
     >
-      <Grid item style={{ marginTop: '2rem', marginLeft: '15rem'}}>
+      <Grid item
+        className={classes.grid}>
         <Typography variant='h3' color="secondary">Filter</Typography>
-      </Grid>
-      <Grid item >
+    </Grid>
+    <Grid item >
         <TextField
+          className={classes.textField}
           placeholder="Search Job"
-          style={{width: '35em', marginLeft: '15rem'}}
           InputProps={{endAdornment:
-      <InputAdornment position="end">
-        <AddIcon color="secondary"/>
-      </InputAdornment>
+           <InputAdornment position="end">
+           <AddIcon color="secondary"/>
+           </InputAdornment>
           }}/>
-      </Grid>
-      <Grid item style={{marginLeft: '14rem', marginTop: '2rem'}}>
+    </Grid>
+      <Grid item
+        className={classes.formGroup}>
         <FormGroup row>
           <FormControlLabel
             control={<Switch/>}
@@ -47,7 +71,6 @@ const Hero=()=> {
             labelPlacement="start"
           />
         </FormGroup>
-
       </Grid>
     </Grid>
 

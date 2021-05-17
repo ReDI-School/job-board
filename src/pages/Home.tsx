@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <PageLayout>
       <Container>
-        <PaginatedJobFeed pageSize={3}/>
+        <PaginatedJobFeed />
       </Container>
     </PageLayout>
   );

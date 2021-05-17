@@ -55,11 +55,11 @@ export function getSearchDifference(search1: URLSearchParams, search2: URLSearch
   const difference=new Set<string>();
 
   search1.forEach((val, key)=>{
-    if(search2.get(key)!==val) difference.add(key)
-  })
+    if(search2.get(key)!==val) difference.add(key);
+  });
   search2.forEach((val, key)=>{
-    if(search1.get(key)!==val) difference.add(key)
-  })
+    if(search1.get(key)!==val) difference.add(key);
+  });
   
   return difference;
 }

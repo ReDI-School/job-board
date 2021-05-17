@@ -6,7 +6,9 @@ import {v4 as uuid} from 'uuid';
 import {Link, useLocation} from 'react-router-dom';
 import { JOBS } from '../api/useFetch';
 import Button from '@material-ui/core/Button';
-import { getSearchDifference, parsePageFromQuery, setValInQueryString, usePrevious, useQuery } from '../utils';
+import { getSearchDifference, parsePageFromQuery, usePrevious } from '../utils';
+import Typography from '@material-ui/core/Typography';
+import Box from '@material-ui/core/Box';
 
 
 //const allowedQueryParams=["page", ]
@@ -16,7 +18,6 @@ const PaginatedJobFeed = () => {
   const [isLoading, setIsLoading]=useState<boolean>(false);
   const [noMoreData, setNoMoreData]=useState(false);
   const [error, setError]=useState(null);
-  
   const queryString=useLocation().search;
   const prevQueryString=usePrevious<string>(queryString);
     
@@ -75,19 +76,32 @@ const PaginatedJobFeed = () => {
     fetchData(2, queryString);
   }, [queryString]);
 
-
+  
 
   return <FetchWrapper isLoading={isLoading} hasError={!!error} data={data}>
     {({data}:{data: IJob[]})=><div>
       {data.map((job: IJob)=><JobListing job={job} key={uuid()}/>)}
       
-      {!noMoreData && 
-        <Link to={location=>({...location, search: new URLSearchParams({page: "2", name: "hello", a: "b"}).toString()})}>
-          <Button color="primary" variant="contained">
-              Next
-          </Button>
-        </Link>
-      }
+      <Box paddingBottom={6}>
+        {!noMoreData ? 
+          <Link 
+            to={location=>{
+              const currentQuery=new URLSearchParams(queryString);
+              const pageFromQuery=parsePageFromQuery(currentQuery);
+              currentQuery.set('page', String(pageFromQuery+1));
+              return {...location, search: currentQuery.toString()};
+            }}>
+            <Button color="primary" variant="contained">
+                More
+            </Button>
+          </Link>
+          :
+          <Typography>
+            Could not find any more data try to adjust your search
+          </Typography>
+        }
+      </Box>
+      
       
     </div>
     }

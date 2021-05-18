@@ -42,10 +42,10 @@ const JobListing = ({ job }: Props) => {
         description={job.content.substring(0, 260)}
         onActionClicked={() => history.push(`/job/${job.id}`)}
       >
-        { <Chip
+        {<Chip
           className={classes.chip}
           label={job.employment_type}
-          color="primary"
+          color="secondary"
         />}
         {job.experience_level && <Chip className={classes.chip} label={job.experience_level} />}
         {job.redi_community_only === 'true' && (
@@ -53,7 +53,7 @@ const JobListing = ({ job }: Props) => {
             className={classes.chip}
             icon={<PeopleIcon fontSize="small" />}
             label={'Community Only'}
-            color="secondary"
+            color="primary"
           />
         )}
         {job.zeitstempel && <Typography variant="caption" className={classes.date}>

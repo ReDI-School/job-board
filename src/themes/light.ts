@@ -1,4 +1,4 @@
-import createMuiTheme  from '@material-ui/core/styles/createMuiTheme';
+import createMuiTheme from '@material-ui/core/styles/createMuiTheme';
 
 import { REDI_COLORS } from './constants';
 
@@ -7,13 +7,13 @@ export default createMuiTheme({
     type: 'light',
     primary: {
       main: REDI_COLORS.orange,
-      light: '#f08c66',
-      dark: '#f9cebe'
+      light: '#ff7d4b',
+      dark: '#ff7d4b'
     },
     secondary: {
-      main: REDI_COLORS.teal,
-      light: '#8AC6D6',
-      dark: '#CDE6EE'
+      main: '#C2E4ED',
+      light: '#88D9F0',
+      dark: REDI_COLORS.teal
     }
   },
 });

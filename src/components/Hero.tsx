@@ -73,7 +73,6 @@ const Hero = () => {
         </FormGroup>
       </Grid>
     </Grid>
-
   );
 };
 

@@ -32,7 +32,6 @@ const useStyles = makeStyles(() =>
 const Hero = () => {
   const classes = useStyles();
 
-
   return (
     <Grid container
       className={classes.root}

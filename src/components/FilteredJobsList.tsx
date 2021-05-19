@@ -7,7 +7,6 @@ import {useHistory} from 'react-router-dom';
 import { JOBS } from '../api/useFetch';
 import { parsePageFromQuery } from '../utils';
 import Pagination from '@material-ui/lab/Pagination';
-import Search from './Search';
 
 
 const PaginatedJobFeed = () => {
@@ -19,14 +18,13 @@ const PaginatedJobFeed = () => {
   const queryString=history.location.search;
   const query=new URLSearchParams(queryString);
   const [page, setPage]=useState(parsePageFromQuery(query));
-  const [filters, setFilters]=useState({});
 
   const fetchData = async (pageSize: number, queryString: string) => {
     setIsLoading(true);
     setError(null);
     try {
       const query=new URLSearchParams(queryString);
-      //const pageFromQuery=parsePageFromQuery(query);
+      const pageFromQuery=parsePageFromQuery(query);
       const skip=(page - 1) * pageSize;
       // adjust the query to include skip and limit instead of page
       query.set('skip', String(skip));
@@ -64,38 +62,17 @@ const PaginatedJobFeed = () => {
   };
 
   useEffect(() => {
-    fetchData(4, queryString);
+    fetchData(2, queryString);
   }, [queryString]);
 
 
-  return <div>
-    <Search setFilters={(filters)=>setFilters(filters)}/>
-    <FetchWrapper isLoading={isLoading} hasError={!!error} data={data}>
+  return <FetchWrapper isLoading={isLoading} hasError={!!error} data={data}>
       {({data}:{data: IJob[]})=><div>
         {data.map((job: IJob)=><JobListing job={job} key={uuid()}/>)}
 
       </div>
       }
     </FetchWrapper>
-    {paginationState && 
-      <Pagination 
-        count={paginationState.totalPages} 
-        defaultPage={1}
-        page={page} 
-        onChange={(_, page: number)=>{
-          query.set('page', String(page))
-          history.push({ 
-            pathname: "/",
-            search: query.toString(),
-            
-          })
-          setPage(page); // setting pages as state even tho we parse the real state from query is triggers a re-render
-
-        }}
-      />
-    }
-  </div>
-  ;
 };
 
 export default PaginatedJobFeed;

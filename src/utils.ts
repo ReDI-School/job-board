@@ -39,6 +39,7 @@ export function parsePageFromQuery(query: URLSearchParams): number {
   const pageNumber=pageQuery ? parseInt(pageQuery) : 1;
   return pageNumber>0? pageNumber : 1;
 }
+
 export function usePageQuery(): number {
   const pageQuery=useQuery().get('page');
   const pageNumber=pageQuery ? parseInt(pageQuery) : 1;

@@ -32,7 +32,7 @@ const App = () => {
               <AddJobPage />
             </Route>
             <Route>
-              <Home />
+              <Home/>
             </Route>
           </Switch>
         </Router>

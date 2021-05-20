@@ -9,6 +9,7 @@ import { parsePageFromQuery, useQuery } from '../utils';
 import Pagination from '@material-ui/lab/Pagination';
 import Search from './Search';
 
+const pageSize=4;
 
 const PaginatedJobFeed = () => {
   const [data, setData]=useState([]);
@@ -58,15 +59,13 @@ const PaginatedJobFeed = () => {
 
   useEffect(()=>{
     const unregister=history.listen((listener)=>{
-      //console.log(listener)
       setQuery(new URLSearchParams(listener.search));
+      fetchData(pageSize, query);
     });
     return ()=> unregister();
   }, [query]);
 
-  useEffect(() => {
-    fetchData(4, query);
-  }, [query]);
+  
 
   const updatePage=(page: number)=>{
     query.set('page', String(page));

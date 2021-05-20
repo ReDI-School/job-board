@@ -5,7 +5,7 @@ import JobListing from './JobListing';
 import {v4 as uuid} from 'uuid';
 import {useHistory} from 'react-router-dom';
 import { JOBS } from '../api/useFetch';
-import { parsePageFromQuery } from '../utils';
+import { parsePageFromQuery, useQuery } from '../utils';
 import Pagination from '@material-ui/lab/Pagination';
 import Search from './Search';
 
@@ -16,24 +16,20 @@ const PaginatedJobFeed = () => {
   const [error, setError]=useState(null);
   const [paginationState, setPagination]=useState<any>();
   const history=useHistory();
-  const queryString=history.location.search;
-  const query=new URLSearchParams(queryString);
-  const [page, setPage]=useState(parsePageFromQuery(query));
-  const [filters, setFilters]=useState({});
+  const [query, setQuery]=useState(useQuery());
 
-  const fetchData = async (pageSize: number, queryString: string) => {
+  const fetchData = async (pageSize: number, query: URLSearchParams) => {
     setIsLoading(true);
     setError(null);
     try {
-      const query=new URLSearchParams(queryString);
-      //const pageFromQuery=parsePageFromQuery(query);
-      const skip=(page - 1) * pageSize;
-      // adjust the query to include skip and limit instead of page
-      query.set('skip', String(skip));
-      query.set('limit', String(pageSize));
-      query.delete('page'); // delete page since our api does not care about that
+      const skip=(parsePageFromQuery(query) - 1) * pageSize;
+      
+      const requestQuery=new URLSearchParams(query.toString()); // create a new query
+      requestQuery.set('skip', String(skip));
+      requestQuery.set('limit', String(pageSize));
+      requestQuery.delete('page'); // delete page since our api does not care about that
 
-      const response = await fetch(`${JOBS}?${query.toString()}`);
+      const response = await fetch(`${JOBS}?${requestQuery.toString()}`);
       const result = await response.json();
       if (response.ok) {
         if(Array.isArray(result.jobs)){
@@ -44,10 +40,6 @@ const PaginatedJobFeed = () => {
           const currentPage=Math.floor(result.start / pageSize);
 
           setPagination({
-            //start: result.start,
-            //end: result.start + result.loaded,
-            //loaded: result.loaded,
-            //total: result.cont,
             currentPage,
             totalPages
           })
@@ -63,13 +55,30 @@ const PaginatedJobFeed = () => {
     }
   };
 
-  useEffect(() => {
-    fetchData(4, queryString);
-  }, [queryString]);
 
+  useEffect(()=>{
+    const unregister=history.listen((listener)=>{
+      //console.log(listener)
+      setQuery(new URLSearchParams(listener.search))
+    })
+    return ()=> unregister()
+  }, [query])
+
+  useEffect(() => {
+    fetchData(4, query);
+  }, [query]);
+
+  const updatePage=(page: number)=>{
+    query.set('page', String(page))
+    history.push({ 
+      pathname: "/",
+      search: query.toString(),
+      
+    })
+  }
 
   return <div>
-    <Search setFilters={(filters)=>setFilters(filters)}/>
+    <Search/>
     <FetchWrapper isLoading={isLoading} hasError={!!error} data={data}>
       {({data}:{data: IJob[]})=><div>
         {data.map((job: IJob)=><JobListing job={job} key={uuid()}/>)}
@@ -81,17 +90,8 @@ const PaginatedJobFeed = () => {
       <Pagination 
         count={paginationState.totalPages} 
         defaultPage={1}
-        page={page} 
-        onChange={(_, page: number)=>{
-          query.set('page', String(page))
-          history.push({ 
-            pathname: "/",
-            search: query.toString(),
-            
-          })
-          setPage(page); // setting pages as state even tho we parse the real state from query is triggers a re-render
-
-        }}
+        page={parsePageFromQuery(query)} 
+        onChange={(_, page: number)=>updatePage(page)}
       />
     }
   </div>

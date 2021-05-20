@@ -1,14 +1,17 @@
 import  Box  from '@material-ui/core/Box'
 import React from 'react'
 
-interface Props {
-    setFilters: (filters: any)=>void
-}
 
-const Search = ({setFilters}: Props) => {
+
+const Search = () => {
     return (
-        <Box display="flex" flexWrap="wrap">
-
+        <Box display="flex" flexWrap="wrap" justifyContent="space-between">
+            <Box>
+                filters
+            </Box>
+            <Box>
+                sort
+            </Box>
         </Box>
     )
 }

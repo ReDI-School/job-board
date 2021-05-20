@@ -1,19 +1,19 @@
-import  Box  from '@material-ui/core/Box'
-import React from 'react'
+import  Box  from '@material-ui/core/Box';
+import React from 'react';
 
 
 
 const Search = () => {
-    return (
-        <Box display="flex" flexWrap="wrap" justifyContent="space-between">
-            <Box>
+  return (
+    <Box display="flex" flexWrap="wrap" justifyContent="space-between">
+      <Box>
                 filters
-            </Box>
-            <Box>
+      </Box>
+      <Box>
                 sort
-            </Box>
-        </Box>
-    )
-}
+      </Box>
+    </Box>
+  );
+};
 
-export default Search
+export default Search;

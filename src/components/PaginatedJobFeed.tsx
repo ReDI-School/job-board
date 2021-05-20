@@ -42,7 +42,7 @@ const PaginatedJobFeed = () => {
           setPagination({
             currentPage,
             totalPages
-          })
+          });
           
         }else throw Error('Unexpected response format');
       }else {
@@ -59,23 +59,23 @@ const PaginatedJobFeed = () => {
   useEffect(()=>{
     const unregister=history.listen((listener)=>{
       //console.log(listener)
-      setQuery(new URLSearchParams(listener.search))
-    })
-    return ()=> unregister()
-  }, [query])
+      setQuery(new URLSearchParams(listener.search));
+    });
+    return ()=> unregister();
+  }, [query]);
 
   useEffect(() => {
     fetchData(4, query);
   }, [query]);
 
   const updatePage=(page: number)=>{
-    query.set('page', String(page))
+    query.set('page', String(page));
     history.push({ 
-      pathname: "/",
+      pathname: '/',
       search: query.toString(),
       
-    })
-  }
+    });
+  };
 
   return <div>
     <Search/>

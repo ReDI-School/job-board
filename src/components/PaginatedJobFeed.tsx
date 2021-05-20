@@ -60,8 +60,9 @@ const PaginatedJobFeed = () => {
   useEffect(()=>{
     const unregister=history.listen((listener)=>{
       setQuery(new URLSearchParams(listener.search));
-      fetchData(pageSize, query);
     });
+    fetchData(pageSize, query);
+
     return ()=> unregister();
   }, [query]);
 

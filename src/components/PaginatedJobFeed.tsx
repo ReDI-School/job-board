@@ -40,7 +40,7 @@ const PaginatedJobFeed = () => {
           const totalItems=result.count;
           const totalPages=Math.ceil((totalItems / pageSize) || 0);
           const currentPage=Math.floor(result.start / pageSize);
-          console.log(totalPages)
+          console.log(totalPages);
           setPagination({
             currentPage,
             totalPages

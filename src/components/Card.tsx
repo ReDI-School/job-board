@@ -9,7 +9,7 @@ import Sanitize from './Sanitize';
 
 const useStyles = makeStyles({
   root: {
-    margin: 15,
+    margin: '15px 0',
     position: 'relative',
   },
 });

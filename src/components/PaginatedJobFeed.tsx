@@ -5,7 +5,7 @@ import JobListing from './JobListing';
 import {v4 as uuid} from 'uuid';
 import {useHistory} from 'react-router-dom';
 import { JOBS } from '../api/useFetch';
-import { parsePageFromQuery, useQuery } from '../utils';
+import { parsePageFromQuery, usePrevious, useQuery } from '../utils';
 import Pagination from '@material-ui/lab/Pagination';
 import Search from './Search';
 
@@ -18,6 +18,7 @@ const PaginatedJobFeed = () => {
   const [paginationState, setPagination]=useState<any>();
   const history=useHistory();
   const [query, setQuery]=useState(useQuery());
+  const previousQuery=usePrevious(query);
 
   const fetchData = async (pageSize: number, query: URLSearchParams) => {
     setIsLoading(true);
@@ -39,7 +40,7 @@ const PaginatedJobFeed = () => {
           const totalItems=result.count;
           const totalPages=Math.ceil((totalItems / pageSize) || 0);
           const currentPage=Math.floor(result.start / pageSize);
-
+          console.log(totalPages)
           setPagination({
             currentPage,
             totalPages
@@ -53,16 +54,18 @@ const PaginatedJobFeed = () => {
     } catch (err) {
       setError(err.message);
       setIsLoading(false);
+      setPagination(null);
     }
   };
 
 
   useEffect(()=>{
-    const unregister=history.listen((listener)=>{
-      setQuery(new URLSearchParams(listener.search));
+    const unregister=history.listen((location)=>{
+      if(query?.toString()!==previousQuery?.toString()){
+        setQuery(new URLSearchParams(location.search));
+      }
     });
     fetchData(pageSize, query);
-
     return ()=> unregister();
   }, [query]);
 
@@ -71,7 +74,7 @@ const PaginatedJobFeed = () => {
   const updatePage=(page: number)=>{
     query.set('page', String(page));
     history.push({ 
-      pathname: '/',
+      pathname: history.location.pathname,
       search: query.toString(),
       
     });

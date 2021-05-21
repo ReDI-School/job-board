@@ -44,7 +44,6 @@ const useFetch = (url: string): IFetchState => {
 };
 
 const useFetchJobs = () => useFetch(JOBS);
-//const useFetchJobsPaginated=(skip: number, take: number)=>useFetch(`${JOBS}?skip=${skip}&take=${take}`)
 const useFetchJob = (jobId: string) => useFetch(`${JOBS}/${jobId}`);
 
 export { useFetchJobs, useFetchJob };

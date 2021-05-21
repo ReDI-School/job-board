@@ -32,6 +32,7 @@ const Search = () => {
     if(val){
       query.set(key, val);
     }else query.delete(key);
+    query.delete('page'); // when the filters change reset the page to default 1
       
     history.push({ 
       pathname: history.location.pathname,

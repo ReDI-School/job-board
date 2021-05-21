@@ -23,10 +23,10 @@ const useStyles = makeStyles((theme: Theme) =>
 const Search = () => {
   const classes = useStyles();
   const history=useHistory();
-  const [type, setType]=useState('');
-  const [experience, setExperience]=useState('');
-  const [language, setLanguage]=useState('');
   const query=new URLSearchParams(history.location.search);
+  const [type, setType]=useState(query.get('employment_type') ?? '');
+  const [experience, setExperience]=useState(query.get('experience_level') ?? '');
+  const [language, setLanguage]=useState(query.get('language') ?? '');
 
   const setQuery=()=>history.push({ 
     pathname: history.location.pathname,

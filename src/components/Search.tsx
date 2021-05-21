@@ -29,34 +29,34 @@ const Search = () => {
   const [language, setLanguage]=useState(query.get('language') ?? '');
 
   const setQuery=(key: string, val: string)=>{
-      if(val){
-        query.set(key, val);
-      }else query.delete(key);
+    if(val){
+      query.set(key, val);
+    }else query.delete(key);
       
-      history.push({ 
+    history.push({ 
       pathname: history.location.pathname,
       search: query.toString(),
     });
-  }
+  };
 
   const updateType=(event: React.ChangeEvent<{ value: unknown }>)=>{
     const val=event.target.value as string;
     setType(val);
-    setQuery('employment_type', val)
+    setQuery('employment_type', val);
     
   };
 
   const updateExperience=(event: React.ChangeEvent<{ value: unknown }>)=>{
     const val=event.target.value as string;
     setExperience(val);
-    setQuery('experience_level', val)
+    setQuery('experience_level', val);
 
   };
 
   const updateLanguage=(event: React.ChangeEvent<{ value: unknown }>)=>{
     const val=event.target.value as string;
     setLanguage(val);
-    setQuery('language', val)
+    setQuery('language', val);
   };
 
   // maybe make this a modal on mobile 

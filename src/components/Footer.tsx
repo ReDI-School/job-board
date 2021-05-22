@@ -20,7 +20,6 @@ const useStyles = makeStyles((theme: Theme) =>
       fontFamily: 'Arial',
       fontSize: '1rem',
       textDecoration: 'none'
-
     },
     icon: {
       color: '#333',

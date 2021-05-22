@@ -1,4 +1,5 @@
 import React from 'react';
+import Hero from '../components/Hero';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
@@ -10,6 +11,7 @@ const PageLayout = (props: Props) => {
   return (
     <>
       <Header />
+      <Hero/>
       <main>{props.children}</main>
       <Footer />
     </>

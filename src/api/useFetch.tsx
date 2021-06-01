@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
-export const BASE_PATH='https://jobs-api.communityredi.school';
-//export const BASE_PATH='http://localhost:8000';
+//export const BASE_PATH='https://jobs-api.communityredi.school';
+export const BASE_PATH='http://localhost:8000';
 
 export const JOBS = `${BASE_PATH}`;
 

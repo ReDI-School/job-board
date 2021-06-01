@@ -12,7 +12,7 @@ import AddIcon from '@material-ui/icons/Add';
 const useStyles = makeStyles(() =>
   createStyles({
     root: {
-       backgroundColor: '#e0e0e0'
+      backgroundColor: '#e0e0e0'
     },
     grid: {
       marginTop: '2rem',
@@ -22,7 +22,7 @@ const useStyles = makeStyles(() =>
       width: '35em',
       marginLeft: '15rem'
     },
-    formGroup:{
+    formGroup: {
       marginLeft: '14rem',
       marginTop: '2rem'
     }
@@ -40,17 +40,17 @@ const Hero = () => {
       <Grid item
         className={classes.grid}>
         <Typography variant='h3' color="secondary">Filter</Typography>
-    </Grid>
-    <Grid item >
+      </Grid>
+      <Grid item >
         <TextField
           className={classes.textField}
           placeholder="Search Job"
           InputProps={{endAdornment:
            <InputAdornment position="end">
-           <AddIcon color="secondary"/>
+             <AddIcon color="secondary"/>
            </InputAdornment>
           }}/>
-    </Grid>
+      </Grid>
       <Grid item
         className={classes.formGroup}>
         <FormGroup row>

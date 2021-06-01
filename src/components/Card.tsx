@@ -45,7 +45,7 @@ const SimpleCard = ({
         {children}
       </CardContent>
       <CardActions onClick={onActionClicked}>
-        <Button size="small">More</Button>
+        <Button color="primary" variant="contained" >More</Button>
       </CardActions>
     </Card>
   );

@@ -48,7 +48,7 @@ function JobPage({ jobId }: Props): ReactElement {
   const result = useFetchJob(jobId);
 
   return (
-    <PageLayout>
+    <PageLayout footerMaxWidth="md">
       <Container maxWidth="md">
         <Box paddingY={2}>
           <FetchWrapper {...result}>

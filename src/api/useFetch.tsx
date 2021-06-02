@@ -1,15 +1,15 @@
 import { useState, useEffect } from 'react';
 
-export const BASE_PATH='https://jobs-api.communityredi.school';
+export const BASE_PATH = 'https://jobs-api.communityredi.school';
 //export const BASE_PATH='http://localhost:8000';
 
 export const JOBS = `${BASE_PATH}`;
 
 interface IFetchState {
-  data: any,
-  isLoading: boolean,
-  hasError: boolean,
-  errorMessage: string,
+  data: any;
+  isLoading: boolean;
+  hasError: boolean;
+  errorMessage: string;
 }
 
 const useFetch = (url: string): IFetchState => {

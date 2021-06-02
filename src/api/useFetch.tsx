@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
 
-export const BASE_PATH = "https://jobs-api.communityredi.school";
+export const BASE_PATH = 'https://jobs-api.communityredi.school';
 //export const BASE_PATH='http://localhost:8000';
 
 export const JOBS = `${BASE_PATH}`;
@@ -16,7 +16,7 @@ const useFetch = (url: string): IFetchState => {
   const [data, setData] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [hasError, setHasError] = useState(false);
-  const [errorMessage, setErrorMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState('');
 
   useEffect(() => {
     const fetchData = async () => {
